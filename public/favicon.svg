@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7A2EF5"/>
+      <stop offset="0.5" stop-color="#B444D6"/>
+      <stop offset="1" stop-color="#F0549C"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.3" cy="0.22" r="0.75">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+  <g id="mark" transform="translate(-40 28)">
+    <g transform="translate(512 528) scale(25) translate(-12 -12)" fill="none" stroke="#fff" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="m14.31 8 5.74 9.94"/><path d="M9.69 8h11.48"/><path d="m7.38 12 5.74-9.94"/>
+      <path d="M9.69 16 3.95 6.06"/><path d="M14.31 16H2.83"/><path d="m16.62 12-5.74 9.94"/>
+    </g>
+    <path transform="translate(772 262)" fill="#fff" d="M0 -92 C10 -30 30 -10 92 0 C30 10 10 30 0 92 C-10 30 -30 10 -92 0 C-30 -10 -10 -30 0 -92Z"/>
+  </g>
+</svg>
