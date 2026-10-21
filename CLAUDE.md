@@ -5,11 +5,11 @@ page at `/`, admin at `/admin` (sign in at `/admin/login`). API contract: `../ph
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173, API from .env.development (local backend :8010)
-npm run build    # dist/, API from .env.production (https://smatsnap-api.strima.co.za/api)
+npm run dev      # http://localhost:5173
+npm run build    # dist/
 ```
 
-Override the API with `VITE_API_BASE_URL=… npm run dev`. Store links on the landing page come from
+Both use the remote API (`https://smatsnap-api.strima.co.za/api`, from `.env.development` / `.env.production`); for a local backend run `VITE_API_BASE_URL=http://localhost:8010/api npm run dev`. The site's hostname (`smatsnap.strima.co.za`) is in `allowedHosts` in `vite.config.js` (dev + preview). Store links on the landing page come from
 `VITE_APP_STORE_URL` / `VITE_PLAY_STORE_URL` (buttons say "Coming soon" until set).
 
 **Deploying:** static `dist/` behind any web server with an SPA fallback (nginx: `try_files $uri /index.html;`),
