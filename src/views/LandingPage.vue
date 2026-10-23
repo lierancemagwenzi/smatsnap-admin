@@ -36,6 +36,7 @@ const features = [
           <a href="#guests">For guests</a>
           <a href="#photographers">For photographers</a>
           <a href="#features">Why SmatSnap</a>
+          <RouterLink to="/studio" class="btn sm">Photographer sign in</RouterLink>
           <a href="#download" class="btn primary sm">Get the app</a>
         </nav>
         <button class="btn ghost sm burger" @click="menu = !menu" aria-label="Menu"><Icon :name="menu ? 'x' : 'menu'" /></button>
@@ -108,6 +109,7 @@ const features = [
             Payments go to your own gateway account in your country.
           </p>
           <a href="#download" class="btn primary">Start selling</a>
+          <RouterLink to="/studio/register" class="btn">Sell from your computer</RouterLink>
         </div>
         <div class="list">
           <div v-for="s in creatorSteps" :key="s.title" class="list-item">

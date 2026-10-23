@@ -61,3 +61,24 @@ export const titleCase = (s) => String(s || '').replace(/_/g, ' ').replace(/\b\w
 
 const GATEWAYS = { smatpay: 'SmatPay', paystack: 'Paystack' };
 export const gateway = (name) => GATEWAYS[name] || titleCase(name);
+
+/** Event dates, e.g. "12 Mar 2026" or "12 – 14 Mar 2026" (DATEONLY strings, no timezone shift). */
+export function eventDates(start, end) {
+  if (!start) return '—';
+  const parse = (d) => { const [y, m, day] = String(d).slice(0, 10).split('-').map(Number); return new Date(y, m - 1, day); };
+  const s = parse(start);
+  const e = end ? parse(end) : s;
+  const full = (d) => d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  if (+s === +e) return full(s);
+  if (s.getFullYear() === e.getFullYear() && s.getMonth() === e.getMonth()) return `${s.getDate()} – ${full(e)}`;
+  return `${s.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })} – ${full(e)}`;
+}
+
+/** Local YYYY-MM-DD (for <input type="date"> bounds). */
+export function isoDay(d = new Date()) {
+  const p = (n) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
+/** Regional-indicator emoji for an ISO country code. */
+export const flag = (code) => String(code || '').toUpperCase().replace(/[A-Z]/g, (c) => String.fromCodePoint(0x1f1a5 + c.charCodeAt(0)));
