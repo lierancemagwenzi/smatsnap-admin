@@ -11,7 +11,7 @@ const pendingStore = {
   set(v) { try { v ? sessionStorage.setItem(PENDING_KEY, JSON.stringify(v)) : sessionStorage.removeItem(PENDING_KEY); } catch { /* private mode */ } },
 };
 
-export const NOT_A_PHOTOGRAPHER = 'This is a client account. Clients find and buy their photos in the SmatSnap app.';
+export const NOT_A_PHOTOGRAPHER = 'This is a client account. Clients find and buy their photos in the creaMob app.';
 
 export const studioSession = {
   state,

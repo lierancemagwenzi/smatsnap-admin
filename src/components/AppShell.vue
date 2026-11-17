@@ -99,7 +99,7 @@ nav { display: flex; flex-direction: column; gap: 2px; padding: 8px 12px; flex: 
   .side { position: fixed; left: 0; top: 0; z-index: 40; transform: translateX(-100%); transition: transform .2s; box-shadow: var(--shadow); }
   .side.open { transform: none; }
   .close, .menu, .top-brand { display: inline-flex; }
-  .scrim { display: block; position: fixed; inset: 0; background: rgba(12, 4, 18, .45); z-index: 30; }
+  .scrim { display: block; position: fixed; inset: 0; background: rgba(0, 0, 0, .45); z-index: 30; }
   .topbar { padding: 10px 16px; }
   .content { padding: 20px 16px; }
 }

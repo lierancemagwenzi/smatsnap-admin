@@ -14,13 +14,13 @@ defineProps({ title: String, subtitle: String, sub: { type: String, default: 'Ad
       </div>
       <slot />
     </div>
-    <RouterLink to="/" class="back small muted">← Back to the SmatSnap website</RouterLink>
+    <RouterLink to="/" class="back small muted">← Back to the creaMob website</RouterLink>
   </div>
 </template>
 
 <style scoped>
 .auth { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 24px 16px; position: relative; overflow: hidden; }
-.glow { position: absolute; inset: 0; background: radial-gradient(600px 400px at 20% 10%, color-mix(in srgb, var(--brand-1) 22%, transparent), transparent), radial-gradient(500px 400px at 90% 90%, color-mix(in srgb, var(--brand-2) 18%, transparent), transparent); pointer-events: none; }
+.glow { position: absolute; inset: 0; background: radial-gradient(600px 400px at 20% 10%, color-mix(in srgb, var(--brand-1) 22%, transparent), transparent), radial-gradient(500px 400px at 90% 90%, color-mix(in srgb, var(--accent) 16%, transparent), transparent); pointer-events: none; }
 .box.wide { max-width: 560px; }
 .box { position: relative; width: 100%; max-width: 420px; padding: 32px; display: flex; flex-direction: column; gap: 24px; }
 .brand-link { text-decoration: none; }

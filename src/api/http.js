@@ -1,4 +1,4 @@
-// Fetch wrapper for the SmatSnap API. Mirrors the mobile app's interceptor: on a 401 it
+// Fetch wrapper for the creaMob API. Mirrors the mobile app's interceptor: on a 401 it
 // refreshes the session once (shared across concurrent requests), saves the rotated tokens
 // and retries; if the refresh fails the session is cleared and the router sends you to login.
 //

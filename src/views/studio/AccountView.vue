@@ -92,7 +92,7 @@ const themes = [['system', 'System', 'monitor'], ['light', 'Light', 'sun'], ['da
 <style scoped>
 .narrow { max-width: 680px; display: flex; flex-direction: column; gap: 16px; }
 .profile { overflow: hidden; display: flex; flex-direction: column; align-items: center; text-align: center; padding-bottom: 22px; }
-.banner { width: 100%; height: 130px; background: linear-gradient(120deg, #2a0f3d, var(--brand-1), var(--brand-2)); color: rgba(255, 255, 255, .12); display: grid; place-items: center; overflow: hidden; }
+.banner { width: 100%; height: 130px; background: linear-gradient(120deg, #1e1e1e, var(--brand-2), var(--brand-1)); color: rgba(255, 255, 255, .12); display: grid; place-items: center; overflow: hidden; }
 .avatar.big { width: 96px; height: 96px; border-radius: 26px; font-size: 32px; margin-top: -48px; border: 4px solid var(--surface); }
 .profile h1 { font-size: 22px; font-weight: 800; margin-top: 12px; }
 .role { margin-top: 10px; background: color-mix(in srgb, var(--brand-2) 14%, transparent); color: var(--brand-2); font-weight: 700; font-size: 12px; padding: 4px 14px; border-radius: 999px; }

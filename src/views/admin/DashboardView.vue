@@ -8,9 +8,9 @@ import StatCard from '../../components/StatCard.vue';
 import ChartCanvas from '../../components/ChartCanvas.vue';
 import Icon from '../../components/Icon.vue';
 
-const PURPLE = '#8b3dff';
-const PINK = '#e64b9b';
-const STATUS_COLORS = { PAID: '#12b981', PENDING: '#f3b555', EXPIRED: '#a796b2', FAILED: '#e64b6b', CANCELLED: '#6b5a78' };
+const PINK = '#ff2f91';
+const GREEN = '#02c793';
+const STATUS_COLORS = { PAID: '#02c793', PENDING: '#f3b555', EXPIRED: '#9e9e9e', FAILED: '#e64b6b', CANCELLED: '#6b6b6b' };
 
 const days = ref(30);
 const stats = ref(null);
@@ -42,7 +42,7 @@ const signupChart = computed(() => {
   return {
     labels: s.map((r) => shortDate(r.date)),
     datasets: [
-      { label: 'Photographers', data: s.map((r) => r.creators), backgroundColor: PURPLE },
+      { label: 'Photographers', data: s.map((r) => r.creators), backgroundColor: GREEN },
       { label: 'Clients', data: s.map((r) => r.clients), backgroundColor: PINK },
     ],
   };
@@ -54,8 +54,8 @@ const salesChart = computed(() => {
   return {
     labels: s.map((r) => shortDate(r.date)),
     datasets: [
-      { label: 'Gross sales', data: s.map((r) => r.gross[c] || 0), borderColor: PURPLE, backgroundColor: 'rgba(139,61,255,.12)', fill: true },
-      { label: 'Platform fees', data: s.map((r) => r.fees[c] || 0), borderColor: PINK, backgroundColor: 'transparent' },
+      { label: 'Gross sales', data: s.map((r) => r.gross[c] || 0), borderColor: PINK, backgroundColor: 'rgba(255,47,145,.12)', fill: true },
+      { label: 'Platform fees', data: s.map((r) => r.fees[c] || 0), borderColor: GREEN, backgroundColor: 'transparent' },
     ],
   };
 });
@@ -65,7 +65,7 @@ const orderChart = computed(() => {
   const keys = Object.keys(by);
   return {
     labels: keys.map((k) => k[0] + k.slice(1).toLowerCase()),
-    datasets: [{ data: keys.map((k) => by[k]), backgroundColor: keys.map((k) => STATUS_COLORS[k] || '#a796b2'), borderWidth: 0 }],
+    datasets: [{ data: keys.map((k) => by[k]), backgroundColor: keys.map((k) => STATUS_COLORS[k] || '#9e9e9e'), borderWidth: 0 }],
   };
 });
 
@@ -79,7 +79,7 @@ const periodTotals = computed(() => stats.value?.orders.totals_in_period || []);
     <div class="page-head">
       <div>
         <h1>{{ greeting }}, {{ session.user.value?.name }}</h1>
-        <p>What’s happening on SmatSnap<span v-if="stats"> since {{ date(stats.since) }}</span>.</p>
+        <p>What’s happening on creaMob<span v-if="stats"> since {{ date(stats.since) }}</span>.</p>
       </div>
       <span class="spacer" />
       <select v-model.number="days" class="select period" aria-label="Period">

@@ -134,7 +134,7 @@ const STATUS = { Paid: 'ok', Pending: 'warn', Failed: 'bad', Cancelled: 'bad' };
 .prompt .grow { flex: 1 1 260px; display: flex; flex-direction: column; gap: 4px; }
 .ico { width: 42px; height: 42px; border-radius: 14px; background: var(--gradient); color: #fff; display: grid; place-items: center; flex: none; }
 .top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr); gap: 16px; margin-bottom: 20px; }
-.balance { background: var(--gradient); color: #fff; border-radius: 24px; padding: 22px; box-shadow: 0 12px 30px rgba(230, 75, 155, .3); display: flex; flex-direction: column; gap: 6px; }
+.balance { background: var(--gradient); color: #fff; border-radius: 24px; padding: 22px; box-shadow: 0 12px 30px rgba(255, 47, 145, .3); display: flex; flex-direction: column; gap: 6px; }
 .balance .row { color: rgba(255, 255, 255, .8); gap: 8px; }
 .lbl { font-weight: 600; }
 .pill { background: rgba(255, 255, 255, .2); padding: 2px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; color: #fff; }

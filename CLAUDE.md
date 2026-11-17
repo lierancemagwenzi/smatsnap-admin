@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-SmatSnap website + admin dashboard + photographer studio: Vue 3 + Vite + Vue Router (no Pinia), Chart.js. Public landing
+creaMob website + admin dashboard + photographer studio: Vue 3 + Vite + Vue Router (no Pinia), Chart.js. Public landing
 page at `/`, admin at `/admin` (sign in at `/admin/login`), photographer studio at `/studio` (sign in at `/studio/login`).
 API contracts: `../photo-backend/docs/admin-api.md`; studio uses `auth-api.md`, `events-api.md`, `payments-api.md`.
 
@@ -27,6 +27,6 @@ otherwise `/admin/...` deep links 404. Set the backend's `ADMIN_DASHBOARD_URL` t
 - `src/components/` — `AdminLayout` (sidebar shell), `ChartCanvas` (Chart.js, follows theme), `Modal`, `ConfirmDialog` (optional reason → activity log), `StatCard`, `StatusBadge`, `Pager`, `Icon` (inline SVG set).
 - **Studio** (`src/studio/`, `src/views/studio/*`, `src/components/studio/*`) — the app's photographer features on the web: login, 2-step signup (account → payout form rendered from the server schema) + OTP, forgot/reset, home stats, my events, search-first find/join, create (409 duplicates modal), event page (gallery, drag-and-drop uploads, event + per-item prices, delete), sales, payout setup, account (theme). `studio/session.js` keeps the OTP/reset step in sessionStorage; `studio/store.js` holds `/creator/dashboard` (payout status, currency); `studio/uploads.js` is the browser UploadManager (single PUT / 8 MiB multipart slices, 4 parts in flight, retry resumes via `GET /media/:id/parts`, remove = DELETE). Jobs are in memory only (a File can't survive a reload), so the page warns before closing mid-upload. `meta.studio` guards `/studio/*`; `meta.studioGuest` bounces signed-in photographers off login/register.
 - `components/AppShell.vue` — sidebar shell shared by `AdminLayout` and `studio/StudioLayout`. `utils/theme.js` — system/light/dark via `data-theme`.
-- Theme tokens in `src/styles.css` (brand purple `#8B3DFF` → pink `#E64B9B`, plum dark mode via `prefers-color-scheme`, Plus Jakarta Sans) — same palette as the app.
+- Theme tokens in `src/styles.css` (from the logo: pink `#FF2F91` → `#E0157A`, mint `--accent` `#02E3A7`, charcoal dark mode via `prefers-color-scheme`, Plus Jakarta Sans) — same palette as the app.
 
 Timestamps from the API are model `createdAt` values exposed as `created_at`; money is always shown per currency (orders can be USD, ZAR, …) — never sum across currencies.

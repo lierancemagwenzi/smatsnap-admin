@@ -26,7 +26,7 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKey));
 </template>
 
 <style scoped>
-.backdrop { position: fixed; inset: 0; background: rgba(12, 4, 18, .55); backdrop-filter: blur(3px); display: grid; place-items: center; padding: 16px; z-index: 50; }
+.backdrop { position: fixed; inset: 0; background: rgba(0, 0, 0, .55); backdrop-filter: blur(3px); display: grid; place-items: center; padding: 16px; z-index: 50; }
 .modal { width: 100%; max-width: 460px; max-height: calc(100vh - 32px); display: flex; flex-direction: column; }
 .modal.wide { max-width: 900px; }
 .modal-head { display: flex; align-items: center; padding: 16px 20px; border-bottom: 1px solid var(--border); }

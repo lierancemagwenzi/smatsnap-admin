@@ -1,73 +1,76 @@
-/* SmatSnap web — brand: purple #8B3DFF → pink #E64B9B, plum dark mode (matches the app). */
+/* creaMob web — brand from the logo: pink #FF2F91 (primary), mint #02E3A7 (accent), charcoal #1E1E1E dark mode (matches the app). */
 :root {
-  --brand-1: #8b3dff;
-  --brand-2: #e64b9b;
+  --brand-1: #ff2f91;
+  --brand-2: #e0157a;
+  --accent: #00a87a;
   --gradient: linear-gradient(120deg, var(--brand-1), var(--brand-2));
 
-  --bg: #fbf7fd;
-  --bg-soft: #f4ecf8;
+  --bg: #fafafa;
+  --bg-soft: #f2f2f2;
   --surface: #ffffff;
-  --surface-2: #f7f1fa;
-  --border: #eadff0;
-  --text: #1d1024;
-  --muted: #6f5f7a;
-  --faint: #a796b2;
+  --surface-2: #f6f6f6;
+  --border: #e6e6e6;
+  --text: #1e1e1e;
+  --muted: #6b6b6b;
+  --faint: #9e9e9e;
 
-  --ok: #12996b;
-  --ok-bg: #e2f6ee;
+  --ok: #00a87a;
+  --ok-bg: #dcf8ee;
   --warn: #b26b00;
   --warn-bg: #fdf1dc;
   --bad: #d43a5a;
   --bad-bg: #fde6eb;
-  --info: #6b3fe0;
-  --info-bg: #efe8ff;
+  --info: #d81b72;
+  --info-bg: #ffe6f2;
 
   --radius: 16px;
   --radius-sm: 10px;
-  --shadow: 0 1px 2px rgba(40, 10, 60, .05), 0 8px 24px rgba(40, 10, 60, .06);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 8px 24px rgba(0, 0, 0, .06);
   --font: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #14081c;
-    --bg-soft: #1b0d25;
-    --surface: #22112b;
-    --surface-2: #2b1736;
-    --border: #3a2347;
-    --text: #f6eefb;
-    --muted: #b9a5c7;
-    --faint: #7f6a8d;
-    --ok: #4fd6a2;
-    --ok-bg: #12382b;
+    --bg: #151515;
+    --bg-soft: #1a1a1a;
+    --surface: #1e1e1e;
+    --surface-2: #262626;
+    --border: #333333;
+    --text: #f5f5f5;
+    --muted: #a3a3a3;
+    --faint: #6b6b6b;
+    --ok: #02e3a7;
+    --ok-bg: #0f3329;
     --warn: #f3b555;
-    --warn-bg: #3d2a10;
-    --bad: #ff7a96;
-    --bad-bg: #44162a;
-    --info: #b79bff;
-    --info-bg: #2e1f55;
+    --warn-bg: #3a2a10;
+    --bad: #ff6b7d;
+    --bad-bg: #401820;
+    --info: #ff6fb0;
+    --info-bg: #3a1428;
+    --accent: #02e3a7;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .25);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #14081c;
-  --bg-soft: #1b0d25;
-  --surface: #22112b;
-  --surface-2: #2b1736;
-  --border: #3a2347;
-  --text: #f6eefb;
-  --muted: #b9a5c7;
-  --faint: #7f6a8d;
-  --ok: #4fd6a2;
-  --ok-bg: #12382b;
+  --bg: #151515;
+  --bg-soft: #1a1a1a;
+  --surface: #1e1e1e;
+  --surface-2: #262626;
+  --border: #333333;
+  --text: #f5f5f5;
+  --muted: #a3a3a3;
+  --faint: #6b6b6b;
+  --ok: #02e3a7;
+  --ok-bg: #0f3329;
   --warn: #f3b555;
-  --warn-bg: #3d2a10;
-  --bad: #ff7a96;
-  --bad-bg: #44162a;
-  --info: #b79bff;
-  --info-bg: #2e1f55;
+  --warn-bg: #3a2a10;
+  --bad: #ff6b7d;
+  --bad-bg: #401820;
+  --info: #ff6fb0;
+  --info-bg: #3a1428;
+  --accent: #02e3a7;
   --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 10px 30px rgba(0, 0, 0, .25);
   color-scheme: dark;
 }
@@ -110,7 +113,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .btn:hover { background: var(--surface-2); }
 .btn:active { transform: translateY(1px); }
 .btn:disabled { opacity: .55; cursor: not-allowed; }
-.btn.primary { background: var(--gradient); color: #fff; border-color: transparent; box-shadow: 0 6px 18px rgba(139, 61, 255, .28); }
+.btn.primary { background: var(--gradient); color: #fff; border-color: transparent; box-shadow: 0 6px 18px rgba(255, 47, 145, .28); }
 .btn.primary:hover { filter: brightness(1.05); }
 .btn.danger { color: var(--bad); border-color: color-mix(in srgb, var(--bad) 35%, transparent); }
 .btn.danger:hover { background: var(--bad-bg); }

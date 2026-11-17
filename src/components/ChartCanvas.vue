@@ -45,7 +45,7 @@ function build() {
       plugins: {
         legend: { display: props.legend, position: 'bottom', labels: { color: text, usePointStyle: true, boxWidth: 8, padding: 16, font: { family: 'Plus Jakarta Sans', weight: 600 } } },
         tooltip: {
-          backgroundColor: '#2a1534', padding: 10, cornerRadius: 10, titleFont: { family: 'Plus Jakarta Sans' }, bodyFont: { family: 'Plus Jakarta Sans' },
+          backgroundColor: '#1e1e1e', padding: 10, cornerRadius: 10, titleFont: { family: 'Plus Jakarta Sans' }, bodyFont: { family: 'Plus Jakarta Sans' },
           callbacks: isPie ? {} : { label: (c) => ` ${c.dataset.label}: ${props.money ? fmt(c.parsed.y) : c.parsed.y}` },
         },
       },

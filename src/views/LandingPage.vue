@@ -35,7 +35,7 @@ const features = [
         <nav class="links" :class="{ open: menu }" @click="menu = false">
           <a href="#guests">For guests</a>
           <a href="#photographers">For photographers</a>
-          <a href="#features">Why SmatSnap</a>
+          <a href="#features">Why creaMob</a>
           <RouterLink to="/studio" class="btn sm">Photographer sign in</RouterLink>
           <a href="#download" class="btn primary sm">Get the app</a>
         </nav>
@@ -50,7 +50,7 @@ const features = [
           <span class="eyebrow"><Icon name="sparkle" :size="14" /> Event photos, found by your face</span>
           <h1>Every shot of you from the event. <span class="grad-text">In seconds.</span></h1>
           <p class="lead">
-            Photographers upload. You snap a selfie. SmatSnap finds every photo and clip you’re in,
+            Photographers upload. You snap a selfie. creaMob finds every photo and clip you’re in,
             so you only pay for the moments that are yours.
           </p>
           <div class="row wrap cta">
@@ -126,7 +126,7 @@ const features = [
     <section id="features" class="section">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Why SmatSnap</span>
+          <span class="kicker">Why creaMob</span>
           <h2>Built for events, trusted with faces</h2>
         </div>
         <div class="features">
@@ -143,7 +143,7 @@ const features = [
       <div class="wrap">
         <div class="download">
           <div>
-            <h2>Get SmatSnap on your phone</h2>
+            <h2>Get creaMob on your phone</h2>
             <p>One app for guests and photographers. Sign up in under a minute.</p>
           </div>
           <div class="row wrap stores">
@@ -179,7 +179,7 @@ const features = [
 .burger { display: none; margin-left: auto; }
 
 .hero { position: relative; padding: 72px 0 88px; }
-.glow { position: absolute; inset: -20% -10% auto; height: 640px; background: radial-gradient(closest-side at 70% 40%, color-mix(in srgb, var(--brand-1) 26%, transparent), transparent), radial-gradient(closest-side at 90% 70%, color-mix(in srgb, var(--brand-2) 20%, transparent), transparent); pointer-events: none; }
+.glow { position: absolute; inset: -20% -10% auto; height: 640px; background: radial-gradient(closest-side at 70% 40%, color-mix(in srgb, var(--brand-1) 26%, transparent), transparent), radial-gradient(closest-side at 90% 70%, color-mix(in srgb, var(--accent) 16%, transparent), transparent); pointer-events: none; }
 .hero-grid { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
 .eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; background: var(--info-bg); color: var(--info); font-weight: 700; font-size: 13px; }
 h1 { font-size: clamp(36px, 5.4vw, 60px); font-weight: 800; letter-spacing: -0.035em; line-height: 1.05; margin: 20px 0 18px; }
@@ -190,23 +190,23 @@ h1 { font-size: clamp(36px, 5.4vw, 60px); font-weight: 800; letter-spacing: -0.0
 .trust :deep(svg) { color: var(--ok); }
 
 .hero-art { position: relative; display: grid; place-items: center; min-height: 480px; }
-.phone { width: 270px; padding: 14px; border-radius: 38px; background: #1b0d25; border: 1px solid #3a2347; box-shadow: 0 40px 80px rgba(60, 10, 90, .35); color: #fff; transform: rotate(3deg); }
+.phone { width: 270px; padding: 14px; border-radius: 38px; background: #1e1e1e; border: 1px solid #333; box-shadow: 0 40px 80px rgba(0, 0, 0, .3); color: #fff; transform: rotate(3deg); }
 .phone-top { display: flex; justify-content: center; gap: 6px; padding: 4px 0 12px; }
-.phone-top .dot { width: 8px; height: 8px; border-radius: 50%; background: #3a2347; }
-.phone-top .pill { width: 60px; height: 8px; border-radius: 8px; background: #3a2347; }
+.phone-top .dot { width: 8px; height: 8px; border-radius: 50%; background: #333; }
+.phone-top .pill { width: 60px; height: 8px; border-radius: 8px; background: #333; }
 .phone-title { font-weight: 800; padding: 0 6px 10px; display: flex; justify-content: space-between; align-items: baseline; }
-.phone-title small { font-weight: 600; color: #b9a5c7; font-size: 11px; }
+.phone-title small { font-weight: 600; color: #a3a3a3; font-size: 11px; }
 .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .tile { position: relative; aspect-ratio: 3 / 4; border-radius: 14px; }
 .t1 { background: linear-gradient(160deg, #f6c38b, #c0567a); }
-.t2 { background: linear-gradient(160deg, #8b3dff, #e64b9b); outline: 2px solid #fff; outline-offset: -2px; }
-.t3 { background: linear-gradient(160deg, #4b2a6b, #e48bb8); }
+.t2 { background: linear-gradient(160deg, #ff2f91, #02e3a7); outline: 2px solid #fff; outline-offset: -2px; }
+.t3 { background: linear-gradient(160deg, #2a2a2a, #ff7ab8); }
 .t4 { background: linear-gradient(160deg, #2c6e8f, #9bd1c9); }
-.t5 { background: linear-gradient(160deg, #e64b9b, #ffb27a); }
-.t6 { background: linear-gradient(160deg, #6243c4, #2a1534); }
-.match { position: absolute; top: 8px; left: 8px; padding: 2px 8px; border-radius: 999px; background: #fff; color: #8b3dff; font-size: 11px; font-weight: 800; }
+.t5 { background: linear-gradient(160deg, #ff2f91, #ffb27a); }
+.t6 { background: linear-gradient(160deg, #02e3a7, #1e1e1e); }
+.match { position: absolute; top: 8px; left: 8px; padding: 2px 8px; border-radius: 999px; background: #fff; color: #e0157a; font-size: 11px; font-weight: 800; }
 .clip { position: absolute; bottom: 8px; left: 8px; display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; background: rgba(0, 0, 0, .5); font-size: 11px; font-weight: 700; }
-.phone-cta { margin-top: 12px; padding: 12px; text-align: center; border-radius: 999px; background: linear-gradient(90deg, #8b3dff, #e64b9b); font-weight: 700; font-size: 14px; }
+.phone-cta { margin-top: 12px; padding: 12px; text-align: center; border-radius: 999px; background: linear-gradient(90deg, #ff2f91, #e0157a); font-weight: 700; font-size: 14px; }
 .float { position: absolute; display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); font-weight: 700; font-size: 13px; }
 .float :deep(svg) { color: var(--brand-1); }
 .f1 { top: 60px; left: 0; }
@@ -223,7 +223,7 @@ h3 { font-size: 17px; font-weight: 700; }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .step { position: relative; padding: 28px; display: flex; flex-direction: column; gap: 10px; }
 .num { position: absolute; top: 20px; right: 24px; font-size: 44px; font-weight: 800; color: var(--border); line-height: 1; }
-.step-ico { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: var(--gradient); color: #fff; box-shadow: 0 8px 20px rgba(139, 61, 255, .25); flex: none; margin-bottom: 6px; }
+.step-ico { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: var(--gradient); color: #fff; box-shadow: 0 8px 20px rgba(255, 47, 145, .25); flex: none; margin-bottom: 6px; }
 
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .split .btn { margin-top: 8px; }
@@ -234,12 +234,12 @@ h3 { font-size: 17px; font-weight: 700; }
 .features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .feature { padding: 24px; display: flex; flex-direction: column; gap: 8px; }
 
-.download { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; padding: 48px; border-radius: 28px; background: var(--gradient); color: #fff; box-shadow: 0 30px 60px rgba(139, 61, 255, .3); }
+.download { display: flex; align-items: center; flex-wrap: wrap; gap: 28px; padding: 48px; border-radius: 28px; background: var(--gradient); color: #fff; box-shadow: 0 30px 60px rgba(255, 47, 145, .3); }
 .download > div:first-child { flex: 1 1 320px; }
 .download h2 { margin-bottom: 8px; }
 .download p { opacity: .9; }
 .stores { gap: 12px; }
-.store { display: flex; flex-direction: column; padding: 10px 20px; border-radius: 14px; background: #14081c; color: #fff; text-decoration: none; font-weight: 800; font-size: 17px; line-height: 1.2; min-width: 170px; }
+.store { display: flex; flex-direction: column; padding: 10px 20px; border-radius: 14px; background: #1e1e1e; color: #fff; text-decoration: none; font-weight: 800; font-size: 17px; line-height: 1.2; min-width: 170px; }
 .store small { font-size: 11px; font-weight: 600; opacity: .75; }
 .store.soon { opacity: .8; }
 

@@ -282,7 +282,7 @@ const pct = (u) => Math.round(u.progress * 100);
 .tile:hover img { transform: scale(1.03); }
 .tile img { transition: transform .2s; }
 .ph { position: absolute; inset: 0; display: grid; place-items: center; color: var(--faint); }
-.veil { position: absolute; inset: 0; background: rgba(10, 2, 16, .55); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 8px; text-align: center; }
+.veil { position: absolute; inset: 0; background: rgba(0, 0, 0, .55); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 8px; text-align: center; }
 .tile.failed .veil { background: rgba(60, 8, 24, .7); cursor: default; }
 .veil .name { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; opacity: .85; font-size: 11px; }
 .tight { gap: 6px; }
@@ -296,7 +296,7 @@ const pct = (u) => Math.round(u.progress * 100);
 .tag.custom { background: var(--gradient); }
 .tip { margin-top: 14px; }
 
-.dropzone { position: fixed; inset: 0; z-index: 45; background: color-mix(in srgb, var(--brand-1) 22%, rgba(10, 2, 16, .55)); display: grid; place-items: center; pointer-events: none; }
+.dropzone { position: fixed; inset: 0; z-index: 45; background: color-mix(in srgb, var(--brand-1) 22%, rgba(0, 0, 0, .55)); display: grid; place-items: center; pointer-events: none; }
 .dropzone div { background: var(--surface); border-radius: 20px; padding: 28px 36px; display: flex; flex-direction: column; align-items: center; gap: 10px; color: var(--brand-2); box-shadow: var(--shadow); }
 .dropzone strong { color: var(--text); }
 

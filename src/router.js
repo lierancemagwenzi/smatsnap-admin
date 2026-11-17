@@ -6,7 +6,7 @@ import { setSessionLostHandler as setStudioSessionLostHandler } from './studio/h
 import LandingPage from './views/LandingPage.vue';
 
 const routes = [
-  { path: '/', name: 'landing', component: LandingPage, meta: { title: 'SmatSnap — Event photos, found by your face' } },
+  { path: '/', name: 'landing', component: LandingPage, meta: { title: 'creaMob — Event photos, found by your face' } },
   { path: '/admin/login', name: 'login', component: () => import('./views/admin/LoginView.vue'), meta: { title: 'Admin sign in' } },
   { path: '/admin/set-password', name: 'set-password', component: () => import('./views/admin/SetPasswordView.vue'), meta: { title: 'Set password' } },
   {
@@ -73,8 +73,8 @@ router.beforeEach(async (to) => {
 });
 
 router.afterEach((to) => {
-  const title = to.meta.title || 'SmatSnap';
-  const area = to.path.startsWith('/studio') ? 'SmatSnap Studio' : 'SmatSnap Admin';
+  const title = to.meta.title || 'creaMob';
+  const area = to.path.startsWith('/studio') ? 'creaMob Studio' : 'creaMob Admin';
   document.title = to.name === 'landing' ? title : `${title} · ${area}`;
 });
 

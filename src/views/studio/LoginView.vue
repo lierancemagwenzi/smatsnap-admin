@@ -49,7 +49,7 @@ async function submit() {
         </div>
       </div>
       <button class="btn primary lg" type="submit" :disabled="busy">{{ busy ? 'Signing in…' : 'Sign in' }}</button>
-      <p class="small muted center">New to SmatSnap? <RouterLink :to="{ name: 'studio-register' }" class="link">Create a photographer account</RouterLink></p>
+      <p class="small muted center">New to creaMob? <RouterLink :to="{ name: 'studio-register' }" class="link">Create a photographer account</RouterLink></p>
     </form>
   </AuthShell>
 </template>

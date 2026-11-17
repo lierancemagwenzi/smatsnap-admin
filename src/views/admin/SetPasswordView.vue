@@ -48,7 +48,7 @@ const save = () => run(async () => {
   if (password.value !== confirm.value) throw new Error('Passwords don’t match');
   const body = await request('POST', '/auth/reset-password', { body: { password: password.value }, token: resetToken.value });
   if (body.user?.user_type !== 'admin') {
-    throw new Error('Password saved, but this isn’t an admin account. Sign in on the SmatSnap app instead.');
+    throw new Error('Password saved, but this isn’t an admin account. Sign in on the creaMob app instead.');
   }
   session.adopt(body);
   router.replace('/admin');
