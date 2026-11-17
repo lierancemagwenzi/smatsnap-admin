@@ -23,6 +23,7 @@ const initials = (u) => `${u.name?.[0] || ''}${u.lastname?.[0] || ''}`.toUpperCa
           <option value="">All types</option>
           <option value="creator">Photographers</option>
           <option value="client">Clients</option>
+          <option value="guest">Guests (no account)</option>
         </select>
         <select v-model="filters.status" class="select" aria-label="Status">
           <option value="">Any status</option>
@@ -48,7 +49,8 @@ const initials = (u) => `${u.name?.[0] || ''}${u.lastname?.[0] || ''}`.toUpperCa
                   <span class="avatar">{{ initials(u) }}</span>
                   <div>
                     <strong>{{ u.name }} {{ u.lastname }}</strong>
-                    <div class="muted small">{{ u.email }}<span v-if="!u.email_verified_at" class="badge warn plain unv">unverified</span></div>
+                    <div v-if="u.is_guest" class="muted small">{{ u.contact_email || 'No email yet' }}<span class="badge plain unv">guest</span></div>
+                    <div v-else class="muted small">{{ u.email }}<span v-if="!u.email_verified_at" class="badge warn plain unv">unverified</span></div>
                   </div>
                 </div>
               </td>

@@ -47,7 +47,7 @@ async function toggleStatus(reason) {
           <span class="avatar big">{{ (u.name[0] + u.lastname[0]).toUpperCase() }}</span>
           <div>
             <h1>{{ u.name }} {{ u.lastname }}</h1>
-            <p class="row wrap"><span>{{ u.email }}</span><StatusBadge :status="u.user_type" /><StatusBadge :status="u.status" /></p>
+            <p class="row wrap"><span>{{ u.is_guest ? (u.contact_email || 'Guest — no email yet') : u.email }}</span><span v-if="u.is_guest" class="badge plain">Guest</span><StatusBadge :status="u.user_type" /><StatusBadge :status="u.status" /></p>
           </div>
         </div>
         <span class="spacer" />
@@ -75,7 +75,7 @@ async function toggleStatus(reason) {
           <dl class="kv card-pad">
             <dt>User ID</dt><dd class="mono">{{ u.id }}</dd>
             <dt>Joined</dt><dd>{{ dateTime(u.created_at) }}</dd>
-            <dt>Email verified</dt><dd>{{ u.email_verified_at ? dateTime(u.email_verified_at) : 'Not yet' }}</dd>
+            <dt>Email verified</dt><dd>{{ u.is_guest ? 'Guest (no account)' : u.email_verified_at ? dateTime(u.email_verified_at) : 'Not yet' }}</dd>
             <dt>Last sign-in</dt><dd>{{ relative(u.last_login_at) }}</dd>
             <dt v-if="!isCreator">Face consent</dt><dd v-if="!isCreator">{{ u.face_consent_at ? dateTime(u.face_consent_at) : 'Not given' }}</dd>
           </dl>
